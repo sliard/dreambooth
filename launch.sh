@@ -22,7 +22,7 @@ accelerate launch train_dreambooth.py \
   --max_train_steps=800 \
   --save_interval=400 \
   --save_sample_prompt="photo of zwx person" \
-  --instance_prompt="photo of zwx person"
-  --class_prompt="photo of a person"
-  --instance_data_dir="./gpeyronnet"
+  --instance_prompt="photo of zwx person" \
+  --class_prompt="photo of a person" \
+  --instance_data_dir="./gpeyronnet" \
   --class_data_dir="./person"
