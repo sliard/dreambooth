@@ -19,7 +19,7 @@ dependencies:
       - bitsandbytes
       - gradio
       - natsort
-      - -e git+https://github.com/ShivamShrirao/diffu3sers.git#egg=diffusers
+      - -e git+https://github.com/ShivamShrirao/diffusers.git#egg=diffusers
 # export LD_LIBRARY_PATH=/opt/conda/envs/diff/lib/python3.8/site-packages/nvidia/cublas/lib/:$LD_LIBRARY_PATH
 variables:
   LD_LIBRARY_PATH: /opt/conda/envs/diff/lib/python3.8/site-packages/nvidia/cublas/lib/:/usr/local/cuda/lib64:/usr/local/nccl2/lib:/usr/local/cuda/extras/CUPTI/lib64
