@@ -7,7 +7,7 @@ accelerate launch train_dreambooth.py \
   --output_dir=$OUTPUT_DIR \
   --revision="fp16" \
   --with_prior_preservation --prior_loss_weight=1.0 \
-  --seed=3434554 \
+  --seed=1337 \
   --resolution=512 \
   --train_batch_size=1 \
   --train_text_encoder \
@@ -20,7 +20,7 @@ accelerate launch train_dreambooth.py \
   --num_class_images=50 \
   --sample_batch_size=4 \
   --max_train_steps=800 \
-  --save_interval=400 \
+  --save_interval=10000 \
   --save_sample_prompt="photo of zwx person" \
   --instance_prompt="photo of zwx person" \
   --class_prompt="photo of a person" \
