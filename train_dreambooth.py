@@ -697,7 +697,7 @@ def main(args):
                 torch_dtype=torch.float16,
                 revision=args.revision,
             )
-            save_dir = os.path.join(args.output_dir, f"{step}")
+            save_dir = os.path.join(args.output_dir, "model")
             pipeline.save_pretrained(save_dir)
             with open(os.path.join(save_dir, "args.json"), "w") as f:
                 json.dump(args.__dict__, f, indent=2)
