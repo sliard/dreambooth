@@ -1,4 +1,4 @@
-export MODEL_NAME="runwayml/stable-diffusion-v1-5"
+export MODEL_NAME="stabilityai/stable-diffusion-2"
 export OUTPUT_DIR="output"
 
 accelerate launch train_dreambooth.py \
@@ -17,12 +17,17 @@ accelerate launch train_dreambooth.py \
   --learning_rate=1e-6 \
   --lr_scheduler="constant" \
   --lr_warmup_steps=0 \
-  --num_class_images=50 \
+  --num_class_images=400 \
   --sample_batch_size=4 \
   --max_train_steps=800 \
-  --save_interval=10000 \
+  --save_interval=100000 \
   --save_sample_prompt="photo of zwx person" \
   --instance_prompt="photo of zwx person" \
   --class_prompt="photo of a person" \
-  --instance_data_dir="./training/gpeyronnet" \
+  --instance_data_dir="./training" \
   --class_data_dir="./regularization/person"
+
+export WEIGHTS_DIR=output/800
+export ckpt_path=$WEIGHTS_DIR/model.ckpt
+
+python convert_diffusers_to_original_stable_diffusion.py --model_path $WEIGHTS_DIR  --checkpoint_path $ckpt_path
