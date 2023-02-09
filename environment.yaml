@@ -23,8 +23,8 @@ dependencies:
       - triton==2.0.0.dev20230208
       - transformers
       - bitsandbytes
-      - -e git+https://github.com/ShivamShrirao/diffusers.git#egg=diffusers
-      - -e git+https://github.com/facebookresearch/xformers@1d31a3a#egg=xformers
+      - xformers==0.0.17.dev444
+      - git+https://github.com/ShivamShrirao/diffusers.git#egg=diffusers
 # export LD_LIBRARY_PATH=/opt/conda/envs/diff/lib/python3.8/site-packages/nvidia/cublas/lib/:$LD_LIBRARY_PATH
 variables:
   LD_LIBRARY_PATH: /opt/conda/envs/diff/lib/python3.8/site-packages/nvidia/cublas/lib/:/usr/local/cuda/lib64:/usr/local/nccl2/lib:/usr/local/cuda/extras/CUPTI/lib64
